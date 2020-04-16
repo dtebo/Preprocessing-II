@@ -10,6 +10,15 @@ html, body {
   font-family: 'Roboto', sans-serif;
 }
 
+.flex(@direction: row, @justify: flex-start, @align: stretch){
+  display: flex;
+  flex-direction: @direction;
+  justify-content: @justify;
+  align-items: @align;
+}
+
+@nav-font: ~"1.8rem Roboto";
+
 h1, h2, h3, h4, h5 {
   font-family: 'Indie Flower', cursive;
 }
