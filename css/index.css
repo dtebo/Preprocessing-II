@@ -261,3 +261,11 @@ img {
   height: 35px;
   color: white;
 }
+.home .content-pick .destination .btn:hover {
+  font: Roboto;
+  background: #005757;
+  border: none;
+  border-radius: 10px;
+  width: 200px;
+  height: 35px;
+}

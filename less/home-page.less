@@ -66,6 +66,10 @@
       .btn{
         .button(@background: teal, @border-radius: 10px, @width: 200px, @height: 35px);
         color: white;
+
+        &:hover{
+          .button(@border-radius: 10px, @background: darken(teal, 8%), @width: 200px, @height: 35px);
+        }
       }
     }
   }
