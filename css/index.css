@@ -252,3 +252,12 @@ img {
   width: 30%;
   margin-bottom: 30px;
 }
+.home .content-pick .destination .btn {
+  font: Roboto;
+  background: teal;
+  border: none;
+  border-radius: 10px;
+  width: 200px;
+  height: 35px;
+  color: white;
+}
