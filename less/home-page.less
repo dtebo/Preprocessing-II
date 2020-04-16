@@ -64,13 +64,29 @@
       margin-bottom: 30px;
 
       .btn{
-        .button(@background: teal, @border-radius: 10px, @width: 200px, @height: 35px);
+        .button(@background: @eastern-blue, @border-radius: 10px, @width: 200px, @height: 35px);
         color: white;
 
         &:hover{
-          .button(@border-radius: 10px, @background: darken(teal, 8%), @width: 200px, @height: 35px);
+          .button(@border-radius: 10px, @background: darken(@eastern-blue, 8%), @width: 200px, @height: 35px);
+        }
+
+        @media @mobile{
+          .button(@border-radius: 10px, @background: @eastern-blue, @width: 100%, @height: 35px);
         }
       }
+
+      @media @mobile{
+        width: 100%;
+      }
     }
+
+    @media @mobile{
+      .flex(column);
+    }
+  }
+
+  @media @mobile{
+    width: 80%;
   }
 }// home
