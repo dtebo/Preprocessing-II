@@ -46,9 +46,17 @@
             width: 100%;
             margin-top: 20px;
         }
+
+        @media @tablet {
+            width: 100%;
+        }
     }
 
     @media @mobile{
+        .flex(column, @align: center);
+    }
+
+    @media @tablet {
         .flex(column, @align: center);
     }
 }
