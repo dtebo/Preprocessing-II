@@ -1,16 +1,31 @@
 // Mixins in here
+
+// Flexbox
 .flex(@direction: row, @justify: flex-start, @align: stretch){
-    display: flex;
-    flex-direction: @direction;
-    justify-content: @justify;
-    align-items: @align;
+  display: flex;
+  flex-direction: @direction;
+  justify-content: @justify;
+  align-items: @align;
+}
+
+// Button
+.button(@font: Roboto, @background: none, @border: none, @border-radius: 0px, @width: auto, @height: auto){
+  font: @font;
+  background: @background;
+  border: @border;
+  border-radius: @border-radius;
+  width: @width;
+  height: @height;
+}
+
+// Animation
+.keyframes(@name, @from, @to){
+  @frames: {
+    from { @from(); }
+    to { @to(); }
   }
-  
-  .button(@font: Roboto, @background: none, @border: none, @border-radius: 0px, @width: auto, @height: auto){
-    font: @font;
-    background: @background;
-    border: @border;
-    border-radius: @border-radius;
-    width: @width;
-    height: @height;
+  @keyframes @name
+  {
+    @frames();
   }
+}

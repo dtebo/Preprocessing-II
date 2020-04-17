@@ -13,9 +13,36 @@
             cursor: pointer;
             font: @nav-font;
             text-decoration: none;
+            position: relative;
+            padding: 1.5rem;
+
+            &:hover{
+                color: rgb(236, 139, 28);
+
+                &:after{
+                    animation: slideOver .3s ease-in forwards, dropDown .3s ease-in .6s forwards;
+                }
+            }
+
+            &:after{
+                content: ' ';
+                display: inline-block;
+                position: absolute;
+                top: 20%;
+                right: 0;
+                height: 2px;
+                width: 0;
+                background-color: rgba(251, 255, 10, 0.5);
+                z-index: -1;
+            }
+
+            @media @mobile {
+                padding-left: .2rem;
+            }
         }
 
         @media @mobile{
+            .flex(@justify: space-around);
             width: 100%;
             margin-top: 20px;
         }
@@ -25,3 +52,6 @@
         .flex(column, @align: center);
     }
 }
+
+.keyframes(slideOver, { width: 0 }, { width: 100% });
+.keyframes(dropDown, { height: 2px }, { height: 30px });
