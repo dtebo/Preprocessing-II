@@ -176,6 +176,13 @@ img {
   border-bottom: 1px dashed gray;
   padding: 20px 85px;
 }
+.site-header #bus-stop {
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  transform: rotate3d(0, 1, 0, 90deg);
+  animation: swingOut 0.4s ease-in forwards;
+}
 .site-header .site-nav {
   display: flex;
   flex-direction: row;
@@ -258,6 +265,14 @@ img {
   }
   to {
     height: 30px;
+  }
+}
+@keyframes swingOut {
+  from {
+    transform: scale3d(0, 1, 0, 90deg);
+  }
+  to {
+    transform: rotate3d(1, 1, 1, 20deg);
   }
 }
 .footer {

@@ -4,6 +4,14 @@
     border-bottom: 1px dashed gray;
     padding: 20px 85px;
 
+    #bus-stop{
+        display: inline-block;
+        height: 30px;
+        width: 30px;
+        transform: rotate3d(0, 1, 0, 90deg);
+        animation: swingOut .4s ease-in forwards;
+    }
+
     .site-nav{
         .flex(row, space-evenly);
         width: 50%;
@@ -63,3 +71,4 @@
 
 .keyframes(slideOver, { width: 0 }, { width: 100% });
 .keyframes(dropDown, { height: 2px }, { height: 30px });
+.keyframes(swingOut, { transform: scale3d(0, 1, 0, 90deg); }, { transform: rotate3d(1, 1, 1, 20deg); });
