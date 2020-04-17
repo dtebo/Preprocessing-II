@@ -387,6 +387,16 @@ img {
     height: 35px;
   }
 }
+@media (max-width: 800px) {
+  .home .content-pick .destination .btn:hover {
+    font: Roboto;
+    background: #128294;
+    border: none;
+    border-radius: 10px;
+    width: 120px;
+    height: 35px;
+  }
+}
 @media (max-width: 500px) {
   .home .content-pick .destination .btn {
     font: Roboto;
@@ -411,6 +421,12 @@ img {
   .home .content-pick .destination {
     padding: 0 20px 0 40px;
     width: 90%;
+  }
+}
+@media (max-width: 800px) {
+  .home .content-pick .destination {
+    width: 40%;
+    margin-right: 5px;
   }
 }
 @media (max-width: 500px) {

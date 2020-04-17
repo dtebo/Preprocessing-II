@@ -98,6 +98,10 @@
           @media @mobile{
             .button(@border-radius: 10px, @background: darken(@eastern-blue, 8%), @width: 100%, @height: 35px);
           }
+
+          @media @tablet{
+            .button(@border-radius: 10px, @background: darken(@eastern-blue, 8%), @width: 120px, @height: 35px);
+          }
         }
 
         @media @mobile{
@@ -112,6 +116,11 @@
       @media @mobile{
         padding: 0 20px 0 40px;
         width: 90%;
+      }
+
+      @media @tablet{
+        width: 40%;
+        margin-right: 5px;
       }
     }
 
