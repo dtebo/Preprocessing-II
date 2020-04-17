@@ -345,6 +345,11 @@ img {
     width: 100%;
   }
 }
+@media (max-width: 800px) {
+  .home .content-destination {
+    width: 100%;
+  }
+}
 .home .content-pick {
   padding-top: 30px;
   border-top: 2px dashed #C0C0C0;
@@ -389,6 +394,16 @@ img {
     border: none;
     border-radius: 10px;
     width: 100%;
+    height: 35px;
+  }
+}
+@media (max-width: 800px) {
+  .home .content-pick .destination .btn {
+    font: Roboto;
+    background: #17A2B8;
+    border: none;
+    border-radius: 10px;
+    width: 120px;
     height: 35px;
   }
 }
