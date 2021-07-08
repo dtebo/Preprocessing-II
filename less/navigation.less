@@ -1,1 +1,74 @@
 // Navigation Styles here
+.site-header{
+    .flex(@justify: space-between);
+    border-bottom: 1px dashed gray;
+    padding: 20px 85px;
+
+    #bus-stop{
+        display: inline-block;
+        height: 30px;
+        width: 30px;
+        transform: rotate3d(0, 1, 0, 90deg);
+        animation: swingOut .4s ease-in forwards;
+    }
+
+    .site-nav{
+        .flex(row, space-evenly);
+        width: 50%;
+
+        a{
+            color: black;
+            cursor: pointer;
+            font: @nav-font;
+            text-decoration: none;
+            position: relative;
+            padding: 1.5rem;
+
+            &:hover{
+                color: rgb(236, 139, 28);
+
+                &:after{
+                    animation: slideOver .3s ease-in forwards, dropDown .3s ease-in .6s forwards;
+                }
+            }
+
+            &:after{
+                content: ' ';
+                display: inline-block;
+                position: absolute;
+                top: 20%;
+                right: 0;
+                height: 2px;
+                width: 0;
+                background-color: rgba(251, 255, 10, 0.5);
+                z-index: -1;
+            }
+
+            @media @mobile {
+                padding-left: .2rem;
+            }
+        }
+
+        @media @mobile{
+            .flex(@justify: space-around);
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        @media @tablet {
+            width: 100%;
+        }
+    }
+
+    @media @mobile{
+        .flex(column, @align: center);
+    }
+
+    @media @tablet {
+        .flex(column, @align: center);
+    }
+}
+
+.keyframes(slideOver, { width: 0 }, { width: 100% });
+.keyframes(dropDown, { height: 2px }, { height: 30px });
+.keyframes(swingOut, { transform: scale3d(0, 1, 0, 90deg); }, { transform: rotate3d(1, 1, 1, 20deg); });
